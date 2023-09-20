@@ -20,7 +20,8 @@ export const Input = () => {
     //   }
   return (
     <div className='bg-dark'>
-    <div style={{display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
+      <h1 align="center" style={{color:"white"}}>Adding Inputs</h1>
+    <div style={{display:"flex" , flexWrap:"wrap", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
         <div class="input-group mb-3 mt-3" style={{width:"300px"}}>
   <span class="input-group-text" id="basic-addon1">@</span>
   <input type="text" class="form-control"  placeholder="Name" aria-label="Username" aria-describedby="basic-addon1"/>
@@ -35,7 +36,7 @@ export const Input = () => {
 </div>
  
     </div>
-     <div style={{display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
+     <div style={{display:"flex", flexWrap:"wrap", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
         <div class="input-group mb-3 mt-3" style={{width:"300px"}}>
   <span class="input-group-text" id="basic-addon1">$</span>
   <input type="text" class="form-control" placeholder="Price" aria-label="Username" aria-describedby="basic-addon1"/>
