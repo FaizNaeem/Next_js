@@ -2,7 +2,7 @@
 export const Home = () => {
     let title = "Car"
   return (
-    <div style={{display:"flex", flexDirection:"row", justifyContent:"space-around", flexWrap:"wrap"}}>
+    <div className="bg-dark " style={{display:"flex", flexDirection:"row", justifyContent:"space-around", flexWrap:"wrap"}}>
         <div className="card mt-3" style={{width:"18rem"}}>
   <img src="https://images.unsplash.com/photo-1695131402412-e342cbccae53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" class="card-img-top" alt="..."/>
   <div class="card-body">
