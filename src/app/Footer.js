@@ -1,4 +1,3 @@
-
 export const Footer = () => {
   return (
     <div className='bg-dark' style={{height:"61px", display:"flex", alignItems:"center", justifyContent:"center"}}> 
