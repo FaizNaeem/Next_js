@@ -1,11 +1,16 @@
 import React from 'react'
+import '../../../.././public/lib/blog'
 
 export default function Nested({ params }) {
     return (
         <div>
-            <h1 align="center">
-                Nested {params.id}
-            </h1>
+          {
+          arr.map((data)=>{
+            return(
+                <h1>{data.name}</h1>
+            )
+          })
+    }
         </div>
     )
 }
