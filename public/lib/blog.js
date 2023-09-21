@@ -41,5 +41,11 @@ const arr =[
         timing:"5Pm to 6PM",
         issueDate:new Date().toLocaleTimeString()
     },
+    {
+        name:"Sir Bilal",
+        class:"Teacher",
+        timing:"5Pm to 6PM",
+        issueDate:new Date().toLocaleTimeString()
+    },
 ]
 export default arr

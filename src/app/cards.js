@@ -1,5 +1,14 @@
+import { db, collection, getDocs, doc, updateDoc, deleteDoc } from "./config/firebase";
+export const Home =  () => {
+async function getData(){
+  const querySnapshot = await getDocs(collection(db, "Data"));
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+  });
+}
+getData()
 
-export const Home = () => {
     let title = "Car"
     return (
       <div className="bg-dark">
