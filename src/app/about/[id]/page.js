@@ -4,13 +4,10 @@ import '../../../.././public/lib/blog'
 export default function Nested({ params }) {
     return (
         <div>
-          {
-          arr.map((data)=>{
-            return(
-                <h1>{data.name}</h1>
-            )
-          })
-    }
+            <h1>{params.id}</h1>
+  {arr.map((e)=>{
+    <h1>{e.class}</h1>
+  })}
         </div>
     )
 }
