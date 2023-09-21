@@ -1,6 +1,5 @@
 import React from 'react'
 import arr from '../../../.././public/lib/blog'
-
 export default function Nested({ params }) {
     return (
         <div>
