@@ -1,17 +1,35 @@
 "use client"
-import React from 'react'
+import React,{useState} from 'react'
+import Swal from 'sweetalert2'
+import 'animate.css';
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+// import 'sweetalert2/src/sweetalert2.scss'
 import arr from '../../../.././public/lib/blog'
 import Link from 'next/link'
 import { Navbar } from '@/app/Navbar'
 
 export default function Nested({ params }) {
-  let num = 0
+  // let num = 0
+  const [Name, setName] = useState('');
   const get = (i)=>
   {
-console.log(i);
-let getData = [...arr]
-console.log(getData[i]);
+    console.log(i);
+    let getData = [...arr[i].name]
+    // console.log(getData[i]);
+    setName(getData)
+let hi = Name.join()
+    
+    Swal.fire({
+      title: `${hi}`,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    })
+    
 
   }
     return (
@@ -30,10 +48,10 @@ console.log(getData[i]);
            <h3>{e.timing}</h3>
            <h4>{e.issueDate}</h4>
            <button onClick={()=> get(i)}>
-           <Link href={`/details?id=${i}&name=${e.name}`}>
+           {/* <Link href={`/details?id=${i}&name=${e.name}`}> */}
 
             Details
-            </Link>
+            {/* </Link> */}
             </button>
             </div>
           
@@ -50,6 +68,9 @@ console.log(getData[i]);
     </Link>
     <button  className='btn btn-danger'  style={{margin:"5px"}}>Contact</button>
   </div>
+  <div className='mt-3' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <p>Selected Name: {Name}</p>
+      </div>
     </>
     )
 }
