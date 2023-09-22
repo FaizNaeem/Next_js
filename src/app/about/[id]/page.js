@@ -6,11 +6,12 @@ import Link from 'next/link'
 import { Navbar } from '@/app/Navbar'
 
 export default function Nested({ params }) {
-  const get = (e)=>
+  let num = 0
+  const get = (i)=>
   {
-console.log(e);
+console.log(i);
 let getData = [...arr]
-console.log(getData[e]);
+console.log(getData[i]);
 
   }
     return (
@@ -19,7 +20,7 @@ console.log(getData[e]);
         <h1 align="center">Cards : {params.id}</h1>
         <div  style={{display:"flex" , flexDirection:"row" ,alignItems:"center", justifyContent:"space-around" , flexWrap:"wrap"}}>
             {/* <h1>{params.id}</h1> */}
-    {arr.map((e)=>{
+    {arr.map((e ,i)=>{
         return(
             <>
             <div className='mt-5' style={{width:"300px" ,borderRadius:"10px" , border:"1px solid black", textAlign:"center"}}>
@@ -28,7 +29,12 @@ console.log(getData[e]);
            <h2>{e.class}</h2>
            <h3>{e.timing}</h3>
            <h4>{e.issueDate}</h4>
-           <button onClick={(e)=>get}>Details</button>
+           <button onClick={()=> get(i)}>
+           <Link href={`/details?id=${i}&name=${e.name}`}>
+
+            Details
+            </Link>
+            </button>
             </div>
           
             </>
