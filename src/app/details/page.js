@@ -1,6 +1,6 @@
 // /pages/details.js
-
-import { useRouter } from 'next/router';
+"use client"
+import { useRouter } from 'next/navigation';
 
 function Details() {
   const router = useRouter();
