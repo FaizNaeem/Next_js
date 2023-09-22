@@ -41,13 +41,14 @@ let hi = Name.join()
     {arr.map((e ,i)=>{
         return(
             <>
-            <div className='mt-5' style={{width:"300px" ,borderRadius:"10px" , border:"1px solid black", textAlign:"center"}}>
-           <h1>{e.name}</h1>
+            <div className='mt-5' style={{width:"300px" ,borderRadius:"10px" , textAlign:"center", border:"1px solid gray"}}>
+           <img  src={e.pic} style={{borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}} width={300} height={300}/>
+           <h2 style={{fontFamily:"serif" , fontWeight:"bold"}}>{e.name}</h2>
                 
-           <h2>{e.class}</h2>
-           <h3>{e.timing}</h3>
+           <h2 style={{fontFamily:"serif" , fontWeight:"bold"}}>{e.class}</h2>
+           <h3 >{e.timing}</h3>
            <h4>{e.issueDate}</h4>
-           <button onClick={()=> get(i)}>
+           <button className='btn btn-success mt-2 mb-3' onClick={()=> get(i)}>
            {/* <Link href={`/details?id=${i}&name=${e.name}`}> */}
 
             Details
