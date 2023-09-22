@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import Swal from 'sweetalert2'
 import 'animate.css';
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
-
 // import 'sweetalert2/src/sweetalert2.scss'
 import arr from '../../../.././public/lib/blog'
 import Link from 'next/link'
