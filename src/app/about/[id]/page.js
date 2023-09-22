@@ -9,7 +9,6 @@ import Link from 'next/link'
 import { Navbar } from '@/app/Navbar'
 
 export default function Nested({ params }) {
-  // let num = 0
   const [Name, setName] = useState('');
   const get = (i)=>
   {
